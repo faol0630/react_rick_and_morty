@@ -1,4 +1,7 @@
 # Getting Started with Create React App
+![Screenshot 2023-05-20 at 22-02-44 React App](https://github.com/faol0630/react_rick_and_morty/assets/63832065/a50034cf-7de5-4633-8a0c-888342da8d97)
+![Screenshot 2023-05-20 at 22-03-16 React App](https://github.com/faol0630/react_rick_and_morty/assets/63832065/3086eb84-f447-44a7-a987-544aacf2edef)
+![Screenshot 2023-05-20 at 22-03-53 React App](https://github.com/faol0630/react_rick_and_morty/assets/63832065/f7c9f888-e737-4ef2-b40f-b3f7d0e3c066)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
