@@ -6,19 +6,33 @@ const Home = () => {
 
     let navigate = useNavigate()
 
-    const goToCharacters = () =>{
+    const goToCharacters = () => {
         navigate("/characters")
     }
 
     return (
-        <div>
-            <header className="d-flex flex-lg-column ">
-                < div id="app" className="d-flex align-items-center justify-content-center col-lg-6 offset-lg-3 col-md-10 offset-md-1 " >
-                    <h1 className="text-info" id="title">Rick & Morty</h1>
-                    <img src={image_rm} id="image" alt='home_image' />
-                    <button onClick={goToCharacters} className="btn btn-outline-info m-5">Buscar personajes</button>
+
+        <div className="container">
+            <div className="row vh-100 d-lg-flex align-items-center justify-content-center">
+                < div id="home" className="col d-lg-flex align-items-center justify-content-center " >
+
+                    <div className="d-flex justify-content-center">
+                        <h1 className="text-info text-center mt-3" id="title">Rick & Morty</h1>
+                    </div>
+
+                    <div className="d-flex justify-content-center">
+                        <img src={image_rm} id="image" alt='home_image' />
+                    </div>
+
+                    <div className="d-flex justify-content-center">
+                        <button onClick={goToCharacters} className="btn btn-outline-info m-5">Buscar personajes</button>
+                    </div>
+
+
                 </div>
-            </header>
+
+            </div>
+
         </div>
     )
 }
