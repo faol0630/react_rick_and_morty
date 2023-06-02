@@ -1,8 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { UserContext } from '../context/UserContext'
 import { reqApi } from '../functions/Functions'
 
+
 const Characters = () => {
+
+
+    //esta const contiene a page y setPage
+    const pageNumber = useContext(UserContext)
 
     let navigate = useNavigate()
 
@@ -17,27 +23,29 @@ const Characters = () => {
 
     const [characters1, setCharacters] = useState([])
 
-    const [page, setPage] = useState(1)
+    
+    const nextPage = () => {
+        if (pageNumber.page <= 41) {
+    
+            pageNumber.setPage(pageNumber.page + 1)
+            reqApi(pageNumber.page, setCharacters)
+        }
+    }
+    
+    const previousPage = () => {
+        if (pageNumber.page >= 2) {
+    
+            pageNumber.setPage(pageNumber.page - 1)
+            reqApi(pageNumber.page, setCharacters)
+        }
+    }
+
 
     useEffect(() => {
-        reqApi(page, setCharacters)
-    }, [page])  //sin pasar page, genera errores en los cambios de pagina
+        reqApi(pageNumber.page, setCharacters)
+    }, [pageNumber.page])  //sin pasar page, genera errores en los cambios de pagina
 
-    const nextPage = () => {
-        if (page <= 41) {
-
-            setPage(page + 1)
-            reqApi(page, setCharacters)
-        }
-    }
-
-    const previousPage = () => {
-        if (page >= 2) {
-
-            setPage(page - 1)
-            reqApi(page, setCharacters)
-        }
-    }
+    
 
     return (
         <div className="container-fluid text-center" >
@@ -46,7 +54,7 @@ const Characters = () => {
 
                 <div className="col-10 col-sm-8 col-md-6 col-lg-4 ">
 
-                    <h1 className=" text-bg-info rounded px-2 mt-2 mx-auto">Personajes</h1>
+                    <h1 className=" text-bg-info rounded px-2 mt-2 mx-auto">Characters</h1>
                     <button className="btn btn-outline-info m-3" onClick={backToHome}>Home</button>
 
                 </div>
@@ -86,7 +94,7 @@ const Characters = () => {
 
 
             <div className="row">
-                <p className="text-bg-danger col-4 offset-4 rounded p-2">Page: {page}</p>
+                <p className="text-bg-danger col-4 offset-4 rounded p-2">Page: {pageNumber.page}</p>
 
             </div>
         </div>

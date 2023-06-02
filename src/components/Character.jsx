@@ -6,7 +6,7 @@ const Character = () => {
 
   let navigate = useNavigate()
 
-  const useParams1 = useParams()  //para traer los datos de Home 
+  const useParams1 = useParams()  //para traer los datos de Characters 
 
   const imgStyles = {
     height: "500px",

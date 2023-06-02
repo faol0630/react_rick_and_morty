@@ -14,6 +14,8 @@ const uniqueCharacter = async (id, state) =>{
 
 }
 
+
+
 export {
 
     reqApi,
