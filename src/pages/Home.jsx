@@ -1,17 +1,11 @@
-import React, { useContext, useEffect } from 'react'
+import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { UserContext } from '../context/UserContext'
+import { goToCharacters } from '../functions/Functions'
 import image_rm from "../img/rm.png"
 
 const Home = () => {
 
-
-
-    let navigate = useNavigate()
-
-    const goToCharacters = () => {
-        navigate("/characters")
-    }
+    const navigate = useNavigate()
 
     return (
 
@@ -28,12 +22,12 @@ const Home = () => {
                     </div>
 
                     <div className="d-flex justify-content-center">
-                        <button onClick={goToCharacters} className="btn btn-outline-info m-5">Characters</button>
+                        <button onClick={ () => {goToCharacters(navigate) }} className="btn btn-outline-info m-5">Characters</button>
                     </div>
 
 
                 </div>
-
+                
             </div>
 
         </div>

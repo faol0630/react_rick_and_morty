@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
+import { UserContext } from '../context/UserContext'
 import { uniqueCharacter } from '../functions/Functions'
 
 const Character = () => {
@@ -13,11 +14,11 @@ const Character = () => {
     objectFit: "cover"
   }
 
-  const [character, setCharacter] = useState([])
+  const { character, setCharacter } = useContext(UserContext)
 
   useEffect(() => {
     uniqueCharacter(useParams1.id, setCharacter)
-  }, [useParams1.id])
+  }, [useParams1.id, setCharacter])
 
   return (
 
