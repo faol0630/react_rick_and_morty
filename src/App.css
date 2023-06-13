@@ -12,3 +12,17 @@
     background-color: #212121;
     border: 1px solid #CCCCCC;
 }
+
+a{
+    text-decoration: none;
+    color: #EEEEEE;
+}
+.previousClass{
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.nextClass{
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}

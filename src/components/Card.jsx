@@ -6,10 +6,6 @@ const Card = () => {
 
     const { characters1 } = useContext(UserContext)
 
-    // -----------------------------------------------------------------
-
-    // ---------------------------------------------------------------------
-
     let navigate = useNavigate()
 
     const imgStyles = {
@@ -20,10 +16,10 @@ const Card = () => {
 
     return (
 
-
         <div className="container">
 
             <div className="row justify-content-center">
+
 
                 {
 
@@ -41,26 +37,16 @@ const Card = () => {
                                     <button className="btn btn-outline-info" onClick={() => navigate(`/character/${character.id}`)} >Details</button>
                                 </div>
                             </div>
+
                         )
 
                     })
 
                 }
 
-                {/* }else{
-
-                    // "No characters found"
-                    <div className="text-bg-dark text-info">
-                        <h3>No Characters Found</h3>
-                    </div>
-                } */}
-
             </div>
 
-
         </div>
-
-
 
     )
 }
