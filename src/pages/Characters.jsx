@@ -36,7 +36,16 @@ const Characters = () => {
 
                 <div className="col-10 col-sm-8 col-md-6 col-lg-4 ">
 
-                    <h1 className=" text-bg-info rounded px-2 mt-2 mx-auto">Characters</h1>
+                    {/* <h1 className=" text-bg-info rounded px-2 mt-2 mx-auto">Characters</h1> */}
+
+                    <marquee
+                        id="marquee1"
+                        className=" text-bg-info rounded px-2 mt-2 mx-auto"
+                        width="100%"
+                        behavior="alternate"
+
+                    >Characters</marquee>
+
                     <button className="btn btn-outline-info m-3" onClick={() => { backToHome(navigate) }}>Home</button>
 
                 </div>
@@ -92,14 +101,14 @@ const Characters = () => {
 
 
 
-            <div className="row">
-                <p className="btn btn-outline-info col-4 offset-4 rounded p-2">Page: {page}</p>
+            <div className="row ">
+                <p className="btn btn-outline-info col-4 offset-4 rounded p-2 justify-content-center">Page: {page}</p>
 
             </div>
 
 
 
-        </div>
+        </div >
     )
 }
 

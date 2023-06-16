@@ -26,3 +26,7 @@ a{
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
 }
+#marquee1{
+    font-size: 30px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
